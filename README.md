@@ -12,6 +12,7 @@ conda activate XXX
 ## Dataset
 Download the piping and sheet metal dataset from the following link:
 https://drive.google.com/drive/folders/1TevFvOuHBV50hqkWHwlLMgEiZvSA9XwX?usp=drive_link 
+
 make sure each dataset contains these folders: fag, labels, MFInstseg_partition, steps.
 
 ## Train
