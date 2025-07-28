@@ -3,8 +3,8 @@ Code for “TGNet: A Graph Neural and Transformer Network for Multi-Task Machini
 
 ## Abstract
 In Computer-Aided Process Planning (CAPP), machining feature recognition (MFR) helps to automatically identify manufacturing features from 3D CAD models. Rule-based and traditional machine learning methods often have difficulty handling complex feature interactions and generalization. In contrast, recent advances in deep learning have led to more robust and effective solutions. In this paper, we propose TGNet, a neural network combining graph neural networks for local feature extraction with a Transformer module for global context modeling. It efficiently processes B-rep data by unifying geometric sampling, attribute embedding, and hierarchical feature fusion. TGNet is designed as a multi-task network that enables precise recognition and localization of machining features and related surfaces, providing essential support for downstream operations such as part dimension measurement. To evaluate TGNet, we construct two fully-annotated datasets for piping and sheet metal, covering a wide range of manufacturing features. Experimental results demonstrate that TGNet delivers strong performance on various tasks, showing great potential for real-world industrial applications.
-![B-rep data processing](image/network.png)
-![Network Architecture](image/archi.png)
+![B-rep data processing](image/DataProcess.png)
+![Network Architecture](image/Network.png)
 
 
 ## Environment Setup
