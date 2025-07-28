@@ -11,7 +11,7 @@ conda activate XXX
 ```
 ## Dataset
 Download the piping and sheet metal dataset from the following link:
-https://drive.google.com/drive/folders/1TevFvOuHBV50hqkWHwlLMgEiZvSA9XwX?usp=drive_link
+https://drive.google.com/drive/folders/1TevFvOuHBV50hqkWHwlLMgEiZvSA9XwX?usp=drive_link 
 make sure each dataset contains these folders: fag, labels, MFInstseg_partition, steps.
 
 ## Train
@@ -32,4 +32,5 @@ After training starts, all logs and models will be saved automatically (the `out
 - Logs: `output/<timestamp>/log.txt`
 - Model checkpoints: `output/<timestamp>/weight_xx-epoch.pth`
 - Best model: `output/<timestamp>/best_model.pth`
+
 (Additionally, offline wandb logs will be stored in the `wandb/` folder.)
