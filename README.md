@@ -36,9 +36,10 @@ After training starts, all logs and models will be saved automatically (the `out
 (Additionally, offline wandb logs will be stored in the `wandb/` folder.)
 
 ## Test
-Open [test.py](Code/test.py) and change the dataset path to your local dataset path:
+Open [test.py](Code/test.py) and change the dataset and weight path:
 ```bash
 Line 57 "dataset": "D:\\dataset\\sheet metal dataset",  # Path containing 'fag', 'labels', 'MFInstseg_partition', and 'steps'
+Line 98 model_param = torch.load("E:/TGNet/Code/output/2025_03_11_17_52_06/weight_27-epoch.pth", map_location=device)
 ```
 Then run: 
 ```bash
