@@ -12,8 +12,7 @@ conda activate XXX
 ## Dataset
 Download the piping and sheet metal dataset from the following link:
 https://drive.google.com/drive/folders/1TevFvOuHBV50hqkWHwlLMgEiZvSA9XwX?usp=drive_link 
-
-make sure each dataset contains these folders: fag, labels, MFInstseg_partition, steps.
+\n make sure each dataset contains these folders: fag, labels, MFInstseg_partition, steps.
 
 ## Train
 Open [dataprocess.py](Code/dataprocess.py) and choose according to the dataset type:
@@ -35,3 +34,14 @@ After training starts, all logs and models will be saved automatically (the `out
 - Best model: `output/<timestamp>/best_model.pth`
 
 (Additionally, offline wandb logs will be stored in the `wandb/` folder.)
+
+## Test
+Open [test.py](Code/test.py) and change the dataset path to your local dataset path:
+```bash
+Line 57 "dataset": "D:\\dataset\\sheet metal dataset",  # Path containing 'fag', 'labels', 'MFInstseg_partition', and 'steps'
+```
+Then run: 
+```bash
+python test.py
+```
+The script will run testing and print the evaluation metrics for the three tasks together with the overall loss value.
