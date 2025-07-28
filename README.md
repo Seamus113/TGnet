@@ -1,4 +1,4 @@
-# TGnet
+# TGNet
 Code for “TGNet: A Graph Neural and Transformer Network for Multi-Task Machining Feature Recognition in B-rep CAD Models”
 ![B-rep data processing](image/network.png)
 ![Network Architecture](image/archi.png)
@@ -10,16 +10,17 @@ conda env create -f environment.yaml -n XXX  # Replace XXX with your environment
 conda activate XXX
 ```
 ## Dataset
-Download the piping and sheet metal dataset from the following link:https://drive.google.com/drive/folders/1TevFvOuHBV50hqkWHwlLMgEiZvSA9XwX?usp=drive_link
+Download the piping and sheet metal dataset from the following link:
+https://drive.google.com/drive/folders/1TevFvOuHBV50hqkWHwlLMgEiZvSA9XwX?usp=drive_link
 make sure each dataset contains these folders: fag, labels, MFInstseg_partition, steps.
 
 ## Train
-Open Code\dataprocess.py and choose according to the dataset type:
+Open [dataprocess.py](Code/dataprocess.py) and choose according to the dataset type:
 ```bash
-Line 21 return 17  # steel metal
+Line 21 # return 17  # steel metal
 Line 22 # return 13  # piping
 ```
-Then Open Code\train.py and change the dataset path to your local dataset path:
+Then Open [train.py](Code/train.py) and change the dataset path to your local dataset path:
 ```bash
 Line 62 "dataset": "D:\\dataset\\sheet metal dataset"  # Path containing 'fag', 'labels', 'MFInstseg_partition', and 'steps'
 ```
@@ -27,3 +28,8 @@ Finally, run:
 ```bash
 python train.py
 ```
+After training starts, all logs and models will be saved automatically (the `output` folder will be created in the same directory where you run `train.py`):
+- Logs: `output/<timestamp>/log.txt`
+- Model checkpoints: `output/<timestamp>/weight_xx-epoch.pth`
+- Best model: `output/<timestamp>/best_model.pth`
+(Additionally, offline wandb logs will be stored in the `wandb/` folder.)
